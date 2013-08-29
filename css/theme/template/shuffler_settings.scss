@@ -1,0 +1,42 @@
+// Base settings for all themes that can optionally be
+// overridden by the super-theme
+
+// Background of the presentation
+$backgroundColor: #fff;
+
+// Primary/body text
+$mainFont: 'brandon-grotesque', Arial, sans-serif;
+$mainFontSize: 36px;
+$mainColor: #212121;
+
+// Headings
+$headingFont: 'brandon-grotesque', Arial, sans-serif;
+$headingColor: #212121;
+$headingLineHeight: 0.9em;
+$headingLetterSpacing: 0.02em;
+$headingTextTransform: uppercase;
+$headingTextShadow: 0px 0px 6px rgba(0,0,0,0.2);
+$heading1TextShadow: $headingTextShadow;
+
+// Links and actions
+$linkColor: #F5351A;
+$linkColorHover: lighten( $linkColor, 20% );
+
+// Text selection
+$selectionBackgroundColor: #FF5E99;
+$selectionColor: #fff;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+  background: $backgroundColor;
+}
+
+// Shuffler
+$SF_RED:#F5351A;
+$SF_LIGHTRED:#f98f80;
+
+$SF_PUREBLACK: #000000;
+$SF_BLACK: #212121;
+$SF_SIGBLACK: #1C1C21; // http://colourness.com/#1C1C21
+$SF_BLACK1: #333333;

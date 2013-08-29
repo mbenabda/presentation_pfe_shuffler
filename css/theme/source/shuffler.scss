@@ -1,0 +1,15 @@
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/shuffler_settings";
+// ---------------------------------------------
+
+.footer{
+  z-index: 10000;
+  position: absolute;
+  bottom: 0.5em;
+  left: 0.5em;
+}
+
+// Theme template ------------------------------
+@import "../template/shuffler_theme";
+// ---------------------------------------------
