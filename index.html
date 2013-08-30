@@ -59,10 +59,10 @@
         </section>
 
         <section>
-          <h2>What did I do there ?</h2>
+          <h2>What did I work on ?</h2>
           <ul>
           	<li>learning RoR by correcting bugs</li>
-          	<li>API from v1 to v2</li>
+          	<li>API: from v1 to v2</li>
           	<li>new SOAP server for Sonos</li>
           </ul>
         </section>
@@ -78,14 +78,15 @@
           <img src="/img/archi_fonctionnelle_no_sonos.jpg" style="border:0px;">
           <img src="/img/legende_archi_fonctionnelle.png" style="border:0px;">
 					<ul>
-            <li>API v1 out of date</li>
+            <li>API v1 was out of date</li>
+            <li>+ unnecessary overload of the web application server</li>
             <li>+ wish to open the new data to developers</li>
             <li>= need to homogenize data access</li>
           </ul>
         </section>
 
         <section>
-          <h2>From v1 to v2</h2>
+          <h2>API: From v1 to v2</h2>
           <br/>
           <ul>
             <li>pagination</li>
@@ -99,7 +100,7 @@
         </section>
 
         <section>
-          <h2>api resource : channels</h2>
+          <h2>API resource: channels</h2>
           <ul>
           	<li>channels
           		<ul>
@@ -110,7 +111,7 @@
         </section>
 
         <section>
-          <h2>api resource users</h2>
+          <h2>API resource: users</h2>
           <ul>
       			<li>GET /users/{user_id}</li>
 	          	<li>favorites
@@ -136,7 +137,7 @@
         </section>
 
         <section>
-          <h2>From v1 to v2</h2>
+          <h2>API: From v1 to v2</h2>
           <h3>General approach:</h3>
           <ul>
             <li>check parameters</li>
@@ -162,47 +163,39 @@
           <h2>How it works</h2>
           <img src="/img/communication_shuffler_sonos.png" style="border:0px;">
           <img src="/img/legende_communication_shuffler_sonos.png" style="border:0px;">
-          <br/>
-          <ul>
-	          <li>Ruby on Rails</li>
-	          <li>SOAP support : wash_out</li>
-	        </ul>
         </section>
 
         <section>
-          <h2>A Sonos service is a hierarchy</h2>
-          <img src="/img/example_structure_collections.png" style="border:0px;">
+          <h2>Tools box</h2><br/>
+          <ul>
+            <li>Ruby on Rails</li>
+            <li>SOAP support : wash_out</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>eg. of SOAP action mapping</h2>
+          <img src="/img/wash_out_definition_getMetadata.png" style="border:0px;">
         </section>
         
- 
+        
         <section>
           <h2>Still to be done</h2>
           <ul>
-          	<li>measure performance metrics (savon client)</li>
-          	<li>launch test suite on production server</li>
-          	<li>submit to sonos</li>
+          	<li>submit the service to sonos</li>
           </ul>
         </section>
         
-
-<!--
-	imposed wsdl
-
-	controler + profiling
-	savon client + benchmarking
-	test suite	
--->
-
 
         <section>
           <h2>Conclusion (1/2)</h2>
           <ul>
           	<li>Applied concepts seen at school: cache, SOAP (XML, XSD, RPC) </li>
-						<li>Learned new concepts:
+						<li>Learned new technologies & concepts:
 							<ul>
-								<li>fingerprinting</li>
-								<li>profiling</li>
-								<li>convention over configuration</li>
+                <li>Ruby on Rails</li>
+                <li>fingerprinting</li>
+								<li>profiling & benchmarking</li>
 							</ul>
 						</li>
 						<li>Autonomous work = Self-training</li>
