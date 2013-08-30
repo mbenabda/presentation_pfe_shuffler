@@ -86,16 +86,52 @@
 
         <section>
           <h2>From v1 to v2</h2>
+          <br/>
           <ul>
             <li>pagination</li>
 		        <li>new Resources
-		          <ul>
-		          	<li>users (GET)</li>
-		          	<li>channels (GET)</li>
-		          	<li>favorites (GET / POST / DELETE)</li>
-		          	<li>subscriptions (GET / POST / DELETE)</li>
-		        	</ul>
-						</li>
+          		<ul>
+          			<li>channels</li>
+          			<li>users</li>
+          		</ul>
+		        </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>api resource : channels</h2>
+          <ul>
+          	<li>channels
+          		<ul>
+          			<li>GET /channels/{channel_key}</li>
+          		</ul>
+          	</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>api resource users</h2>
+          <ul>
+      			<li>GET /users/{user_id}</li>
+	          	<li>favorites
+          		<ul>
+          			<li>GET /users/{user_id}/favorites</li>
+          			<li>GET /users/{user_id}/favorites?track_id={track_id}</li>
+          			<li>GET /users/{user_id}/favorites/{favorite_id}</li>
+          			<li>POST /users/{user_id}/favorites</li>
+          			<li>DELETE /users/{user_id}/favorites/{favorite_id}</li>  
+          		</ul>   
+          	</li>
+          	<li>subscriptions
+          		<ul>
+								<li>GET /users/{user_id}/subscriptions</li>
+								<li>GET /users/{user_id}/subscriptions?entity={entity}</li>
+								<li>GET /users/{user_id}/subscriptions?entity={entity}&entity_id={entity_id}</li>
+								<li>GET /users/{user_id}/subscriptions/{subscription_id}</li>
+								<li>POST /users/{user_id}/subscriptions</li>
+								<li>DELETE /users/{user_id}/subscriptions/{subscription_id}</li>
+          		</ul>
+          	</li>
           </ul>
         </section>
 
@@ -103,11 +139,14 @@
           <h2>From v1 to v2</h2>
           <h3>General approach:</h3>
           <ul>
-            <li>validate parameters</li>
-            <li>build & execute SQL request</li>
-            <li>format result & respond</li>
+            <li>check parameters</li>
+            <li>try to get cached result</li>
+            <li>no cache: build & execute SQL request</li>
+            <li>cache result</li>
+            <li>format response & send it</li>
           </ul>
         </section>
+
 
         
         <section>
@@ -125,21 +164,16 @@
           <img src="/img/legende_communication_shuffler_sonos.png" style="border:0px;">
           <br/>
           <ul>
-	          <li>SOAP knowledge : wash_out</li>
+	          <li>Ruby on Rails</li>
+	          <li>SOAP support : wash_out</li>
 	        </ul>
         </section>
 
         <section>
-          <h2>How it works</h2>
-          <img src="/img/communication_shuffler_sonos.png" style="border:0px;">
-          <img src="/img/legende_communication_shuffler_sonos.png" style="border:0px;">
-          <br/>
-          <ul>
-	          <li>SOAP knowledge : wash_out</li>
-	        </ul>
+          <h2>A Sonos service is a hierarchy</h2>
+          <img src="/img/example_structure_collections.png" style="border:0px;">
         </section>
-
-
+        
  
         <section>
           <h2>Still to be done</h2>
