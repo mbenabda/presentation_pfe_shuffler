@@ -45,8 +45,8 @@
           <h2>Shuffler ?</h2>
         	<ul>
           	<li>Tim Heineke & Marcel Corso</li>
-          	<li>Music overload = hard to find relevant content</li>
-          	<li>Music blogs are relevent</li>
+          	<li>music overload = hard to find new relevant content</li>
+          	<li>music blogs have genre-specific relevent content</li>
           </ul>
         </section>
 
@@ -54,173 +54,150 @@
           <img src="/img/screenshot_shuffler_PMA.jpg">
         </section>
 
+        <section>
+          <img src="/img/screenshot_shuffler_PMA_player.jpg">
+        </section>
 
         <section>
-          <h3>Solutions</h3>
-          <h2>Filtering and Recomendation</h2>
+          <h2>What did I do there ?</h2>
           <ul>
-            <li>From friends (nice)</li>
-            <li>From facebook friends (not nice)</li>
-            <li>Algorithmic (similarity etc... ) but how to model "serendipity"</li>
+          	<li>learning RoR by correcting bugs</li>
+          	<li>API from v1 to v2</li>
+          	<li>new SOAP server for Sonos</li>
           </ul>
         </section>
 
         <section>
-          <h2>Blogs, Music Magazines, Artist Sites</h2>
-          <ul>
-            <li>The diversity of the Open Music Web</li>
-            <li>Context. Colors. Identification.</li>
-            <li>Open. No walled gardens.</li>
-            <li>For artists, own sites are great for generating money</li>
-            <li>But.. same problem: overload</li>
+          <h2>Why an API v2 ?</h2>
+          <img src="/img/archi_fonctionnelle_nothing.jpg" style="border:0px;">
+          <img src="/img/legende_archi_fonctionnelle.png" style="border:0px;">
+        </section>
+
+        <section>
+          <h2>why an API v2 ?</h2>
+          <img src="/img/archi_fonctionnelle_no_sonos.jpg" style="border:0px;">
+          <img src="/img/legende_archi_fonctionnelle.png" style="border:0px;">
+					<ul>
+            <li>API v1 out of date</li>
+            <li>+ wish to open the new data to developers</li>
+            <li>= need to homogenize data access</li>
           </ul>
         </section>
 
         <section>
-          <img src="/img/bette-midler-blog.png">
-        </section>
-
-        <section>
-          <img src="/img/lower-frequencies-blog.png">
-        </section>
-
-        <section>
-          <img src="/img/keytars-violins-blog.png">
-        </section>
-
-        <section>
-          <img src="/img/no-fear-of-pop-blog.png">
-        </section>
-
-        <section>
-          <img src="/img/layabozy-blog.png">
-        </section>
-
-        <section>
-          <img src="/img/mongolian-music-blog.png">
-        </section>
-
-
-        <section>
-          <h2>Shuffler.fm</h2>
-        </section>
-
-        <section>
-          <img src="/img/radio.png">
-        </section>
-
-        <section>
-          <h3>Radio</h3>
+          <h2>From v1 to v2</h2>
           <ul>
-            <li>Low barrier access to great sites/contexts</li>
-            <li>Get media (youtube, mp3, vimeo, soundcloud...) from pages</li>
-            <li>Using last.fm folksonomized genre ontologies that fail but failing a bit ok cause we are exploring</li>
+            <li>pagination</li>
+		        <li>new Resources
+		          <ul>
+		          	<li>users (GET)</li>
+		          	<li>channels (GET)</li>
+		          	<li>favorites (GET / POST / DELETE)</li>
+		          	<li>subscriptions (GET / POST / DELETE)</li>
+		        	</ul>
+						</li>
           </ul>
         </section>
 
         <section>
-          <img src="/img/tv.png">
+          <h2>From v1 to v2</h2>
+          <h3>General approach:</h3>
+          <ul>
+            <li>validate parameters</li>
+            <li>build & execute SQL request</li>
+            <li>format result & respond</li>
+          </ul>
         </section>
 
+        
         <section>
-          <h3>TV</h3>
+          <h2>why the Sonos app ?</h2>
           <ul>
-            <li>Like radio but prettier to the eyes</li>
-            <li>Centered on curators not genre</li>
-            <li>Cool feature: Detecting movement</li>
+            <li>bring the blogs to the users</li>
+            <li>bring users to the blogs</li>
+            <li>more freedom to the users on how they consume shuffler's music</li>
           </ul>
         </section>
 
         <section>
-          <img src="/img/pop.png">
+          <h2>How it works</h2>
+          <img src="/img/communication_shuffler_sonos.png" style="border:0px;">
+          <img src="/img/legende_communication_shuffler_sonos.png" style="border:0px;">
+          <br/>
+          <ul>
+	          <li>SOAP knowledge : wash_out</li>
+	        </ul>
         </section>
 
         <section>
-          <h3>Pop</h3>
+          <h2>How it works</h2>
+          <img src="/img/communication_shuffler_sonos.png" style="border:0px;">
+          <img src="/img/legende_communication_shuffler_sonos.png" style="border:0px;">
+          <br/>
           <ul>
-            <li>Fingerprint and count</li>
+	          <li>SOAP knowledge : wash_out</li>
+	        </ul>
+        </section>
+
+
+ 
+        <section>
+          <h2>Still to be done</h2>
+          <ul>
+          	<li>measure performance metrics (savon client)</li>
+          	<li>launch test suite on production server</li>
+          	<li>submit to sonos</li>
+          </ul>
+        </section>
+        
+
+<!--
+	imposed wsdl
+
+	controler + profiling
+	savon client + benchmarking
+	test suite	
+-->
+
+
+        <section>
+          <h2>Conclusion (1/2)</h2>
+          <ul>
+          	<li>Applied concepts seen at school: cache, SOAP (XML, XSD, RPC) </li>
+						<li>Learned new concepts:
+							<ul>
+								<li>fingerprinting</li>
+								<li>profiling</li>
+								<li>convention over configuration</li>
+							</ul>
+						</li>
+						<li>Autonomous work = Self-training</li>
+						<li>Team work = communication</li>
           </ul>
         </section>
 
         <section>
-          <img src="/img/blogs.png">
-        </section>
-
-        <section>
-          <h3>Directory</h3>
+          <h2>Conclusion (2/2)</h2>
+          <img src="/img/archi_fonctionnelle.jpg" style="border:0px;">
+          <img src="/img/legende_archi_fonctionnelle.png" style="border:0px;">
           <ul>
-            <li>Sites by genre</li>
-            <li>Blogs, artist, brands</li>
+          	<li>API works & is live
+          		<ul>
+          			<li>windows phone app uses it</li>
+          		</ul>
+          	</li>
+						<li>Sonos app's only waiting for DB improvement</li>
           </ul>
         </section>
 
-        <section>
-          <img src="/img/for-sites.png">
-        </section>
 
         <section>
-          <img src="/img/causality-sales.png">
-        </section>
-
-        <section>
-          <h3>Shuffler For Sites</h3>
+          <h2>Contacts</h2><br/>
           <ul>
-            <li>Blogs, artist, brands</li>
-            <li>We give them a player and retention</li>
-            <li>Billions and billions</li>
+          	<li>mehdi.se.insat@gmail.com</li>
+          	<li>marcel@shuffler.fm</li>
+          	<li>we@shuffler.fm</li>
           </ul>
-        </section>
-
-        <section>
-          <img src="/img/radiozine.png">
-        </section>
-
-        <section>
-          <img src="/img/profile.png">
-        </section>
-
-        <section>
-          <h3>Radiozine</h3>
-          <ul>
-            <li>Subscribe to stuff, it gets delivered to you</li>
-            <li>Site retention goes here</li>
-          </ul>
-        </section>
-
-        <section>
-          <h3>Elsewhere</h3>
-          <ul>
-            <li>IOS</li>
-            <li>API apps (spreading blogger juice everywhere)</li>
-            <li>Deezer, Spotify, ?Windows?</li>
-          </ul>
-        </section>
-
-        <section>
-          <img src="/img/ipad.png">
-        </section>
-
-        <section>
-          <img src="/img/iphone.png">
-        </section>
-
-        <section>
-          <img src="/img/developers.png">
-        </section>
-
-        <section>
-          <img src="/img/deezer.png">
-        </section>
-
-        <section>
-          <img src="/img/spotify.png">
-        </section>
-
-        <section>
-          <h2>Goosebumps in front of an excel sheet</h2>
-
-          <h3>marcel@shuffler.fm</h3>
-          <h3>we@shuffler.fm</h3>
         </section>
 
 
