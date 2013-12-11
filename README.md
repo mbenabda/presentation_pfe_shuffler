@@ -1,7 +1,4 @@
-# Shuffler presentations 
-
-This is the master branch for presentations. Checkout a new branch with ```git checkout -b newbranchname``` to create a new instance of a presentation.
-
+# Internship presentation
 
 ## How to run it?
 
